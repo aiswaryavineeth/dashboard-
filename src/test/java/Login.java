@@ -16,6 +16,8 @@ public class Login extends Main {
         WebElement welcome = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='user MuiBox-root mui-0']")));
         String wel = welcome.getText();
         Assert.assertEquals(wel,expected);
+        System.out.println("Login as successfully");
+        System.out.println(driver.getTitle());
 
     }
 }
