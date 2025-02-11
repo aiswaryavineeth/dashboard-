@@ -9,6 +9,8 @@ import org.testng.annotations.BeforeSuite;
 
 import java.time.Duration;
 
+import static java.awt.SystemColor.text;
+
 public class Main {
 public static WebDriver driver;
 public static WebDriverWait wait;
@@ -29,10 +31,10 @@ public void clicked(By locator)
     WebElement element=wait.until(ExpectedConditions.elementToBeClickable(locator));
     element.click();
 }
-public void enterText(By locator)
+public void enterText(By locator, String number)
 {
     WebElement element= wait. until(ExpectedConditions.elementToBeClickable(locator));
-    element.sendKeys(text);
+    element.sendKeys(number);
 }
 }
 
