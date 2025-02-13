@@ -43,6 +43,7 @@ public class LoginPage extends Main {
         driver.findElement(submitButton).click();
     }
 
+
     public String getWelcomeMessage() {
         WebElement welcome = wait.until(ExpectedConditions.visibilityOfElementLocated(welcomeMessage));
         return welcome.getText();
