@@ -1,14 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Suite">
-    <test name="Test">
+<suite name="AutomationSuite">
+    <test name="Login Test">
         <classes>
-            <class name="Login"/>
-            <class name="AddProject"/>
-            <!-- <class name="promotions"/>
-             <class name="addproject"/>
-             <class name="holidayhomes"/>-->
-            <!--            <class name="careers"/>-->
+            <class name="LoginTest"/>
         </classes>
     </test>
 </suite>
