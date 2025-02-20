@@ -3,6 +3,7 @@
     <test name="Login Test">
         <classes>
             <class name="LoginTest"/>
+            <class name="AddProjectTest"/>
         </classes>
     </test>
 </suite>
