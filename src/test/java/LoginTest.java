@@ -7,7 +7,7 @@ public class LoginTest extends Main {
         LoginPage loginPage = new LoginPage(driver);
 
         // Step 1: Open Login Page
-        loginPage.openLoginPage("http://192.168.1.193:3000");
+        loginPage.openLoginPage("https://dashboard.aqaryint.com/en");
 
         // Step 2: Perform Login
         loginPage.clickLoginButton();

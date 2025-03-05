@@ -7,7 +7,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
 public class AddProject extends Main {
-    private By projectsTab = By.xpath("//span[normalize-space()='Projects']");
+  //  private By projectsTab = By.xpath("//span[normalize-space()='Projects']");
+    private By projects=By.xpath("//span[normalize-space()='Projects']");
     private By addProject = By.xpath("//span[normalize-space()='Add Project']");
     private By projectName = By.name("project_name");
     private By licenseNumber = By.name("license_no");
@@ -37,7 +38,7 @@ public class AddProject extends Main {
     }
 
     public void openProjectsTab() {
-        clickWhenReady(projectsTab);
+        clickWhenReady(projects);
     }
 
     public void clickAddProject() {
