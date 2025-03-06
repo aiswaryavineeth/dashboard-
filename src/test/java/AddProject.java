@@ -8,7 +8,8 @@ import java.time.Duration;
 
 public class AddProject extends Main {
   //  private By projectsTab = By.xpath("//span[normalize-space()='Projects']");
-    private By projects=By.xpath("//span[normalize-space()='Projects']");
+    private By projects=By.xpath("//*[@class='MuiTypography-root MuiTypography-body1 MuiListItemText-primary mui-1ok7d9e']");
+
     private By addProject = By.xpath("//span[normalize-space()='Add Project']");
     private By projectName = By.name("project_name");
     private By licenseNumber = By.name("license_no");
@@ -29,12 +30,13 @@ public class AddProject extends Main {
 
     // Generic method to wait for an element to be clickable and then click it
     public void clickWhenReady(By locator) {
-        wait.until(ExpectedConditions.elementToBeClickable(locator));
+        wait.until(ExpectedConditions.elementToBeClickable(locator)).click();
+
     }
 
     // Generic method to wait for an element to be visible and then send keys
-    private void enterTextWhenReady(By locator, String text) {
-        wait.until(ExpectedConditions.visibilityOfElementLocated(locator)).sendKeys(text);
+    public void enterProjectName(String name) {
+        enterTextWhenReady(projectName, name);
     }
 
     public void openProjectsTab() {
@@ -62,10 +64,10 @@ public class AddProject extends Main {
     }
     public void devopercompany(String devop){
         enterTextWhenReady(DeveloperCompany,devop);
-     //   wait.until(ExpectedConditions.presenceOfElementLocated(firstOption));
+        wait.until(ExpectedConditions.presenceOfElementLocated(firstOption));
 
-        // Click the first option
-     //   clickElement(firstOption);
+//         Click the first option
+        clickElement(firstOption);
 
     }
     public void clickElement(By locator) {
